@@ -26,6 +26,7 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="{{route('procura.index')}}">Pesquisar</a>
       <a class="nav-item nav-link" href="{{route('jogadores.index')}}">Jogadores</a>
+      <a class="nav-item nav-link" href="{{route('equipas.index')}}">Equipas</a>
     </div>
   </div>
 </nav>

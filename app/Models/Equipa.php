@@ -12,4 +12,8 @@ class Equipa extends Model
     protected $primaryKey = "id_equipa";
 
     protected $table = "equipas";
+
+    public function jogador(){
+        return $this->belongsTo('App\Models\Jogador','id_jogador');
+    }
 }
