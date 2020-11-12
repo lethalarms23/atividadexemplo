@@ -4,9 +4,13 @@ Resultado para: {{$texto}}
 @endsection
 @section('conteudo')
 @if(count($resultado1)>0)
-    Resultados de Jogadores:<br>
+    <div style="text-align: center">
+    <b>Resultados de Jogadores</b><br>
+    </div>
     @foreach($resultado1 as $res1)
-    {{$res1->nome}}<br>
+    <div style="text-align: center">
+    <a href="{{route('jogadores.show',['id'=>$res1->id_jogador])}}">{{$res1->nome}}</a><br>
+    </div>
     @endforeach
 @else
     <div class="alert alert-danger" role="alert">
@@ -14,9 +18,13 @@ Resultado para: {{$texto}}
     </div>
 @endif
 @if(count($resultado2)>0)
-    Resultados de Equipas:<br>
+    <div style="text-align: center">
+    <b>Resultados de Equipas</b><br>
+    </div>
     @foreach($resultado2 as $res2)
-    {{$res2->designacao}}
+    <div style="text-align: center">
+    <a href="{{route('equipas.show',['id'=>$res2->id_equipa])}}">{{$res2->designacao}}</a><br>
+    </div>
     @endforeach
 @else
     <div class="alert alert-danger" role="alert">
